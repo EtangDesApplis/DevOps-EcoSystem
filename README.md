@@ -16,8 +16,7 @@ sudo reboot
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 ```
-
-# Start eco-system
+# Set up
 ```
 mkdir -p data-artifactory
 mkdir -p data-gitlab/config
@@ -28,6 +27,10 @@ mkdir -p data-sonarqube/data
 mkdir -p data-sonarqube/extensions
 mkdir -p data-sonarqube/logs
 chmod -R 777 data-artifactory
+```
+
+# Start eco-system
+```
 docker-compose up -d
 ```
 Gitlab is avaiable at: localhost:443
