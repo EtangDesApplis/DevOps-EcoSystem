@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+
+   jenkins:
+     image: jenkins/jenkins:latest
+     ports:
+       - "8080:8080"
+     volumes:
+       - /home/user/DockerCompose/data-jenkins:/var/jenkins_home
+     restart: always
+     
+   artifactory:
+     image: docker.bintray.io/jfrog/artifactory-oss:latest
+     ports:
+       - "8081:8081"
+       - "8082:8082"
+     volumes:
+       - /home/user/DockerCompose/data-artifactory:/var/opt/jfrog/artifactory
+     restart: always
+     
+   sonarqube:
+     image: sonarqube:latest
+     ports:
+       - "9000:9000"
+     volumes:
+       - /home/user/DockerCompose/data-sonarqube/extensions:/opt/sonarqube/extensions
+       - /home/user/DockerCompose/data-sonarqube/logs:/opt/sonarqube/logs
+       - /home/user/DockerCompose/data-sonarqube/conf:/opt/sonarqube/conf
+       - /home/user/DockerCompose/data-sonarqube/data:/opt/sonarqube/data
+     restart: always
+     
+   gitlab:
+     image: gitlab/gitlab-ee:latest
+     ports:
+       - "443:443"
+       - "80:80"
+       - "2222:22"
+     volumes:
+       - /home/user/DockerCompose/data-gitlab/config:/etc/gitlab
+       - /home/user/DockerCompose/data-gitlab/logs:/var/log/gitlab
+       - /home/user/DockerCompose/data-gitlab/data:/var/opt/gitlab
+     restart: always
+       
