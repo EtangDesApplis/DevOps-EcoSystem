@@ -31,7 +31,7 @@ services:
      restart: always
      
    gitlab:
-     image: gitlab/gitlab-ee:latest
+     image: gitlab/gitlab-ce:latest
      ports:
        - "443:443"
        - "80:80"
