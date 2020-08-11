@@ -34,8 +34,9 @@ mkdir -p data-sonarqube/logs
 ```
 docker-compose up -d
 ```
-Gitlab is avaiable at: localhost:443
+Gitlab is avaiable at: localhost:80
 default user is root (password reset will be asked for the first time of connection)
+ssh is available through port 2222 (we reserve 22 for Jenkins slave by ssh)
 
 Jenkins is available at: localhost:8080
 
