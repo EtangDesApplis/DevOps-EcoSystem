@@ -26,7 +26,8 @@ mkdir -p data-gitlab/logs && \
 mkdir -p data-sonarqube/conf && \
 mkdir -p data-sonarqube/data && \
 mkdir -p data-sonarqube/extensions && \
-mkdir -p data-sonarqube/logs
+mkdir -p data-sonarqube/logs && \
+mkdir -p data-jenkins
 
 ```
 
