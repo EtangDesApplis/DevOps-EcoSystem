@@ -18,15 +18,16 @@ sudo chmod +x /usr/local/bin/docker-compose
 ```
 # Set up
 ```
-mkdir -p data-artifactory
-mkdir -p data-gitlab/config
-mkdir -p data-gitlab/data
-mkdir -p data-gitlab/logs
-mkdir -p data-sonarqube/conf
-mkdir -p data-sonarqube/data
-mkdir -p data-sonarqube/extensions
+mkdir -p data-artifactory && \
+chmod -R 777 data-artifactory && \
+mkdir -p data-gitlab/config && \
+mkdir -p data-gitlab/data && \
+mkdir -p data-gitlab/logs && \
+mkdir -p data-sonarqube/conf && \
+mkdir -p data-sonarqube/data && \
+mkdir -p data-sonarqube/extensions && \
 mkdir -p data-sonarqube/logs
-chmod -R 777 data-artifactory
+
 ```
 
 # Start eco-system
