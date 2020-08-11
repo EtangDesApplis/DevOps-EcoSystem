@@ -35,16 +35,21 @@ mkdir -p data-jenkins
 ```
 docker-compose up -d
 ```
-Gitlab is avaiable at: [a link](http://localhost:80)
-default user is root (password reset will be asked for the first time of connection)
+Gitlab is avaiable at: [localhost:80](http://localhost:80)
+
+Default user is root (password reset will be asked for the first time of connection)
 ssh is available through port 2222 (we reserve 22 for Jenkins slave by ssh)
 
-Jenkins is available at: [a link](http://localhost:8080)
+Jenkins is available at: [localhost:8080](http://localhost:8080)
 
-Artifactory is available at: [a link](http://localhost:8082/ui/)
+Init password can be found at: ./data-jenkins/secrets/initialAdminPassword
+
+Artifactory is available at: [localhost:8082/ui/](http://localhost:8082/ui/)
+
 The authenticaion by default is: admin/password
 
-Sonar is available at : [a link](http://localhost:9000)
+Sonar is available at : [localhost:9000](http://localhost:9000)
+
 The authenticaion by default is: admin/admin
 
 # Stop eco-system
